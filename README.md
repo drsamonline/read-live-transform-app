@@ -6,12 +6,12 @@
 
 *Read the verse. Live the practice. Keep the change.*
 
-[![Landing page](https://img.shields.io/badge/Landing%20page-Live-c9a227?style=flat-square)](https://drsamonline.github.io/read-live-transform-app/)
-[![Open the app](https://img.shields.io/badge/App-Open%20live-17332d?style=flat-square)](https://drsamonline.github.io/read-live-transform-app/play/)
-[![PWA: Installable](https://img.shields.io/badge/PWA-Installable-315c52?style=flat-square)](docs/INSTALL.md)
-[![Works Offline](https://img.shields.io/badge/Works-Offline-17332d?style=flat-square)](docs/PRIVACY.md)
-[![Dependencies: None](https://img.shields.io/badge/Dependencies-None-2f5140?style=flat-square)](docs/ARCHITECTURE.md)
-[![License: All Rights Reserved](https://img.shields.io/badge/License-All%20Rights%20Reserved-c0392b?style=flat-square)](LICENSE)
+[![Landing page](https://img.shields.io/badge/Landing%20page-Live-c9a227
+[![Open the app](https://img.shields.io/badge/App-Open%20live-17332d
+[![PWA: Installable](https://img.shields.io/badge/PWA-Installable-315c52
+[![Works Offline](https://img.shields.io/badge/Works-Offline-17332d
+[![Dependencies: None](https://img.shields.io/badge/Dependencies-None-2f5140
+[![License: All Rights Reserved](https://img.shields.io/badge/License-All%20Rights%20Reserved-c0392b
 
 **[Landing page](https://drsamonline.github.io/read-live-transform-app/)** &nbsp;·&nbsp; **[Open the live app](https://drsamonline.github.io/read-live-transform-app/play/)** &nbsp;·&nbsp; **[Source](https://github.com/drsamonline/read-live-transform-app)**
 
@@ -21,7 +21,6 @@
 
 <div align="center">
 
-# Read. Live. Transform.
 
 **A practical reading of the Qur'an — as an app.**
 
@@ -29,16 +28,16 @@
 
 <br>
 
-[![License: All Rights Reserved](https://img.shields.io/badge/License-All%20Rights%20Reserved-c0392b?style=flat-square)](LICENSE)
-[![Reuse: Permission Required](https://img.shields.io/badge/Reuse-Permission%20Required-d3a24a?style=flat-square)](LICENSE)
-[![PWA: Installable](https://img.shields.io/badge/PWA-Installable-315c52?style=flat-square)](docs/INSTALL.md)
-[![Works Offline](https://img.shields.io/badge/Works-Offline-17332d?style=flat-square)](docs/PRIVACY.md)
-[![Dependencies: None](https://img.shields.io/badge/Dependencies-None-2f5140?style=flat-square)](docs/ARCHITECTURE.md)
+[![License: All Rights Reserved](https://img.shields.io/badge/License-All%20Rights%20Reserved-c0392b
+[![Reuse: Permission Required](https://img.shields.io/badge/Reuse-Permission%20Required-d3a24a
+[![PWA: Installable](https://img.shields.io/badge/PWA-Installable-315c52
+[![Works Offline](https://img.shields.io/badge/Works-Offline-17332d
+[![Dependencies: None](https://img.shields.io/badge/Dependencies-None-2f5140
 
-[![App Size](https://img.shields.io/badge/App-292%20KB-6fc7ae?style=flat-square)](docs/ARCHITECTURE.md)
-[![Chapters](https://img.shields.io/badge/Chapters-74-b38b4d?style=flat-square)](docs/FEATURES.md)
-[![Book](https://img.shields.io/badge/Book-Read.%20Live.%20Transform.-17332d?style=flat-square)](#the-book)
-[![Author](https://img.shields.io/badge/Author-Dr%20Sohil%20Momin-315c52?style=flat-square)](https://github.com/drsamonline)
+[![App Size](https://img.shields.io/badge/App-292%20KB-6fc7ae
+[![Chapters](https://img.shields.io/badge/Chapters-74-b38b4d
+[![Book](https://img.shields.io/badge/Book-Read.%20Live.%20Transform.-17332d
+[![Author](https://img.shields.io/badge/Author-Dr%20Sohil%20Momin-315c52
 
 <br>
 
