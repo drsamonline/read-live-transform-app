@@ -6,6 +6,27 @@
 
 *Read the verse. Live the practice. Keep the change.*
 
+[![Landing page](https://img.shields.io/badge/Landing%20page-Live-c9a227?style=flat-square)](https://drsamonline.github.io/read-live-transform-app/)
+[![Open the app](https://img.shields.io/badge/App-Open%20live-17332d?style=flat-square)](https://drsamonline.github.io/read-live-transform-app/play/)
+[![PWA: Installable](https://img.shields.io/badge/PWA-Installable-315c52?style=flat-square)](docs/INSTALL.md)
+[![Works Offline](https://img.shields.io/badge/Works-Offline-17332d?style=flat-square)](docs/PRIVACY.md)
+[![Dependencies: None](https://img.shields.io/badge/Dependencies-None-2f5140?style=flat-square)](docs/ARCHITECTURE.md)
+[![License: All Rights Reserved](https://img.shields.io/badge/License-All%20Rights%20Reserved-c0392b?style=flat-square)](LICENSE)
+
+**[Landing page](https://drsamonline.github.io/read-live-transform-app/)** &nbsp;·&nbsp; **[Open the live app](https://drsamonline.github.io/read-live-transform-app/play/)** &nbsp;·&nbsp; **[Source](https://github.com/drsamonline/read-live-transform-app)**
+
+</div>
+
+---
+
+<div align="center">
+
+# Read. Live. Transform.
+
+**A practical reading of the Qur'an — as an app.**
+
+*Read the verse. Live the practice. Keep the change.*
+
 <br>
 
 [![License: All Rights Reserved](https://img.shields.io/badge/License-All%20Rights%20Reserved-c0392b?style=flat-square)](LICENSE)
@@ -79,7 +100,7 @@ python3 -m http.server 8080
 - **Desktop Chrome / Edge:** the install icon in the address bar
 
 A live copy is published with GitHub Pages:
-**https://drsamonline.github.io/read-live-transform-app/**
+**https://drsamonline.github.io/read-live-transform-app/play/**
 
 More in **[docs/INSTALL.md](docs/INSTALL.md)**.
 

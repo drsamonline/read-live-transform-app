@@ -30,7 +30,7 @@ Once installed it opens full-screen, works with no internet, and keeps your data
 
 Published with GitHub Pages:
 
-**https://drsamonline.github.io/read-live-transform-app/**
+**https://drsamonline.github.io/read-live-transform-app/play/**
 
 Open that on a phone and add it to the home screen — no server of your own needed.
 
