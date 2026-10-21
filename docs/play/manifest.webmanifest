@@ -1,0 +1,31 @@
+{
+ "name": "Read. Live. Transform.",
+ "short_name": "Read. Live.",
+ "description": "A practical reading of the Qur'an \u2014 read the verse, live the practice, keep the change.",
+ "start_url": "./index.html",
+ "scope": "./",
+ "display": "standalone",
+ "background_color": "#faf8f1",
+ "theme_color": "#17332d",
+ "orientation": "portrait",
+ "icons": [
+  {
+   "src": "icon-192.png",
+   "sizes": "192x192",
+   "type": "image/png",
+   "purpose": "any"
+  },
+  {
+   "src": "icon-512.png",
+   "sizes": "512x512",
+   "type": "image/png",
+   "purpose": "any"
+  },
+  {
+   "src": "icon-512.png",
+   "sizes": "512x512",
+   "type": "image/png",
+   "purpose": "maskable"
+  }
+ ]
+}
