@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page not found — Read. Live. Transform.</title>
+<meta name="robots" content="noindex, follow">
+<meta name="theme-color" content="#062a22">
+<link rel="icon" href="/read-live-transform-app/assets/icon-192.png" type="image/png">
+<style>
+  :root{--forest:#062a22;--gold:#c9a227;--gold-soft:#e2c765;--cream:#f7f2e5;--cream-dim:#cdc4ac}
+  *{box-sizing:border-box}
+  body{margin:0;min-height:100vh;background:var(--forest);color:var(--cream);
+    font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    display:grid;place-items:center;text-align:center;padding:2rem}
+  .motif{position:fixed;inset:0;width:100%;height:100%;color:var(--gold);opacity:.09;pointer-events:none}
+  .box{position:relative;max-width:520px}
+  svg.star{width:74px;height:74px;color:var(--gold);margin-bottom:1.6rem}
+  .code{font-family:Georgia,serif;font-size:3.6rem;color:var(--gold-soft);line-height:1;margin:0 0 .4rem}
+  h1{font-family:Georgia,"Times New Roman",serif;font-weight:600;font-size:1.7rem;margin:0 0 .8rem}
+  p{color:var(--cream-dim);margin:0 0 1.8rem}
+  a.btn{display:inline-block;background:var(--gold);color:var(--forest);text-decoration:none;
+    font-weight:600;padding:.78rem 1.6rem;border-radius:999px}
+  a.btn:hover{background:var(--gold-soft)}
+</style>
+</head>
+<body>
+<svg class="motif" aria-hidden="true"><defs>
+  <pattern id="g" width="100" height="100" patternUnits="userSpaceOnUse">
+    <g fill="none" stroke="currentColor" stroke-width="1">
+      <rect x="26" y="26" width="48" height="48"/>
+      <rect x="26" y="26" width="48" height="48" transform="rotate(45 50 50)"/>
+      <polygon points="63,50 59.2,59.2 50,63 40.8,59.2 37,50 40.8,40.8 50,37 59.2,40.8"/>
+    </g>
+  </pattern></defs>
+  <rect width="100%" height="100%" fill="url(#g)"/>
+</svg>
+<div class="box">
+  <svg class="star" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round" aria-hidden="true">
+    <rect x="8" y="8" width="16" height="16"/>
+    <rect x="8" y="8" width="16" height="16" transform="rotate(45 16 16)"/>
+    <circle cx="16" cy="16" r="3"/>
+  </svg>
+  <p class="code">404</p>
+  <h1>This page has not been written</h1>
+  <p>The page you were looking for is not here. The reading, though, is one tap away.</p>
+  <a class="btn" href="/read-live-transform-app/">Back to Read. Live. Transform.</a>
+</div>
+</body>
+</html>
