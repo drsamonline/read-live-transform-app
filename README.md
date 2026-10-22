@@ -15,6 +15,8 @@
 
 **[Landing page](https://drsamonline.github.io/read-live-transform-app/)** &nbsp;·&nbsp; **[Open the live app](https://drsamonline.github.io/read-live-transform-app/play/)** &nbsp;·&nbsp; **[Source](https://github.com/drsamonline/read-live-transform-app)**
 
+**Download:** [Windows (.exe)](https://github.com/drsamonline/read-live-transform-app/releases/latest/download/read-live-transform-app-portable.exe) &nbsp;·&nbsp; [Android (.apk)](https://github.com/drsamonline/read-live-transform-app/releases/latest/download/read-live-transform-app.apk)
+
 </div>
 
 ---
