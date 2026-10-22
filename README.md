@@ -7,6 +7,7 @@
 *Read the verse. Live the practice. Keep the change.*
 
 [![Landing page](https://img.shields.io/badge/Landing%20page-Live-c9a227)](https://drsamonline.github.io/read-live-transform-app/)
+[![All projects](https://img.shields.io/badge/All%20projects-hub-c9a227)](https://drsamonline.github.io/)
 [![Open the app](https://img.shields.io/badge/App-Open%20live-17332d)](https://drsamonline.github.io/read-live-transform-app/play/)
 [![PWA: Installable](https://img.shields.io/badge/PWA-Installable-315c52)](https://drsamonline.github.io/read-live-transform-app/play/)
 [![Works Offline](https://img.shields.io/badge/Works-Offline-17332d)](https://drsamonline.github.io/read-live-transform-app/play/)
