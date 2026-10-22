@@ -11,7 +11,7 @@
 [![Open the app](https://img.shields.io/badge/App-Open%20live-17332d)](https://drsamonline.github.io/read-live-transform-app/play/)
 [![PWA: Installable](https://img.shields.io/badge/PWA-Installable-315c52)](https://drsamonline.github.io/read-live-transform-app/play/)
 [![Works Offline](https://img.shields.io/badge/Works-Offline-17332d)](https://drsamonline.github.io/read-live-transform-app/play/)
-[![Dependencies: None](https://img.shields.io/badge/Dependencies-None-2f5140)](#)
+[![Dependencies: None](https://img.shields.io/badge/Dependencies-None-2f5140)](
 [![License: All Rights Reserved](https://img.shields.io/badge/License-All%20Rights%20Reserved-c0392b)](LICENSE)
 
 **[Landing page](https://drsamonline.github.io/read-live-transform-app/)** &nbsp;·&nbsp; **[Open the live app](https://drsamonline.github.io/read-live-transform-app/play/)** &nbsp;·&nbsp; **[Source](https://github.com/drsamonline/read-live-transform-app)**
@@ -24,22 +24,13 @@
 
 <div align="center">
 
-
-**A practical reading of the Qur'an — as an app.**
-
-*Read the verse. Live the practice. Keep the change.*
-
 <br>
 
-[![License: All Rights Reserved](https://img.shields.io/badge/License-All%20Rights%20Reserved-c0392b)](LICENSE)
 [![Reuse: Permission Required](https://img.shields.io/badge/Reuse-Permission%20Required-d3a24a)](LICENSE)
-[![PWA: Installable](https://img.shields.io/badge/PWA-Installable-315c52)](https://drsamonline.github.io/read-live-transform-app/play/)
-[![Works Offline](https://img.shields.io/badge/Works-Offline-17332d)](https://drsamonline.github.io/read-live-transform-app/play/)
-[![Dependencies: None](https://img.shields.io/badge/Dependencies-None-2f5140)](#)
 
-[![App Size](https://img.shields.io/badge/App-292%20KB-6fc7ae)](#)
-[![Chapters](https://img.shields.io/badge/Chapters-74-b38b4d)](#)
-[![Book](https://img.shields.io/badge/Book-Read.%20Live.%20Transform.-17332d)](#)
+[![App Size](https://img.shields.io/badge/App-292%20KB-6fc7ae)](
+[![Chapters](https://img.shields.io/badge/Chapters-74-b38b4d)](
+[![Book](https://img.shields.io/badge/Book-Read.%20Live.%20Transform.-17332d)](
 [![Author](https://img.shields.io/badge/Author-Dr%20Sohil%20Momin-315c52)](https://github.com/drsamonline)
 
 <br>
