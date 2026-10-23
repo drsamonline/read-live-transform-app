@@ -5,3 +5,7 @@ Thumbs.db
 *~
 .idea/
 .vscode/
+
+# Node (test tooling)
+node_modules/
+package-lock.json

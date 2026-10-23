@@ -1,0 +1,12 @@
+{
+  "name": "read-live-transform-app",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Read. Live. Transform. - offline reading companion.",
+  "scripts": {
+    "test": "node tests/webkit-smoke.test.js"
+  },
+  "devDependencies": {
+    "happy-dom": "^15.11.7"
+  }
+}
