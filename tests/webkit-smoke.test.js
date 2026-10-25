@@ -87,7 +87,7 @@ function snapshot(w) {
   //    it. Asserting the fallback was GONE (as this suite did until now) locked a
   //    capability loss in as a requirement - the app exported with no kit at all
   //    before the retrofit, and must still.
-  ok('the page loads export-kit.js', /src=["']export-kit\.js["']/.test(html));
+  ok('export-kit ships INSIDE the page (no sibling file needed)', html.indexOf('export-kit: cannot convert') !== -1);
   ok('export prefers the kit AND keeps a local fallback',
      /window\.Export\s*&&\s*typeof\s+Export\.save/.test(html) && html.indexOf('createObjectURL') !== -1);
   ok('export-kit is available to the app', w.eval('typeof Export') === 'object' && w.eval('typeof Export.save') === 'function');
