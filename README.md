@@ -2,6 +2,12 @@
 
 # Read. Live. Transform.
 
+<!-- shot:start -->
+
+![Screenshot](docs/shot.png)
+
+<!-- shot:end -->
+
 **A practical reading of the Qur'an — as an app.**
 
 *Read the verse. Live the practice. Keep the change.*
