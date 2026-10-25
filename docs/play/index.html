@@ -369,7 +369,12 @@ if('serviceWorker' in navigator){ window.addEventListener('load',()=>navigator.s
     catch (e) { out.storageError = String(e); }
     var name = (document.title || "app").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "") + "-data-" + new Date().toISOString().slice(0, 10) + ".json";
     var json = JSON.stringify(out, null, 2);
-    Export.save(name, json, "application/json");
+    /* Keep the app working with NO kit loaded: this file is opened as a single
+       file by readers who save it, and the retrofit that wired export-kit in
+       also deleted the fallback that used to cover exactly that case. The kit
+       is preferred; the local path is the floor, not the replacement. */
+    if (window.Export && typeof Export.save === "function") Export.save(name, json, "application/json");
+    else { var a = document.createElement("a"); a.href = URL.createObjectURL(new Blob([json], { type: "application/json" })); a.download = name; document.body.appendChild(a); a.click(); setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 1000); }
     return name;
   };
   /* --- import --- */
