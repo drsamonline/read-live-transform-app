@@ -81,10 +81,15 @@ function snapshot(w) {
   let w4 = boot();
   ok('fresh install starts at xp 0', w4.eval("window.__store.load().xp") === 0);
 
-  // 6. the export retrofit: the page hands the file to export-kit, it does not
-  //    hand-roll a Blob -> objectURL -> <a download> of its own.
+  // 6. the export retrofit: the page hands the file to export-kit. It also keeps
+  //    its own Blob -> objectURL -> <a download> path as the FLOOR, because this
+  //    app is handed to readers as a file and export-kit.js is not always beside
+  //    it. Asserting the fallback was GONE (as this suite did until now) locked a
+  //    capability loss in as a requirement - the app exported with no kit at all
+  //    before the retrofit, and must still.
   ok('the page loads export-kit.js', /src=["']export-kit\.js["']/.test(html));
-  ok('the page no longer hand-rolls a download (no createObjectURL)', html.indexOf('createObjectURL') === -1);
+  ok('export prefers the kit AND keeps a local fallback',
+     /window\.Export\s*&&\s*typeof\s+Export\.save/.test(html) && html.indexOf('createObjectURL') !== -1);
   ok('export-kit is available to the app', w.eval('typeof Export') === 'object' && w.eval('typeof Export.save') === 'function');
   w.eval('window.__exp = []; Export.save = function (n, t, m) { window.__exp.push([n, t, m]); };');
   const exported = w.eval('window.__exportAll && window.__exportAll()');
