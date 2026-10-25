@@ -18,6 +18,10 @@ const file = process.argv[2] || path.join(root, 'index.html');
 const html = fs.readFileSync(file, 'utf8');
 const wkPath = path.join(path.dirname(file), 'web-kit.js');
 const wk = fs.existsSync(wkPath) ? fs.readFileSync(wkPath, 'utf8') : '';
+// export-kit is the second kit the page loads (the export retrofit): load it the
+// same way, so the suite sees the same globals the browser does.
+const ekPath = path.join(path.dirname(file), 'export-kit.js');
+const ek = fs.existsSync(ekPath) ? fs.readFileSync(ekPath, 'utf8') : '';
 
 // inline <script> blocks (the app), and the page with executable scripts stripped.
 // The app's data lives in <script id="bookdata" type="application/json"> - keep it.
@@ -34,6 +38,7 @@ function boot(seed) {
   for (const [k, v] of Object.entries(seed || {})) { try { w.localStorage.setItem(k, v); } catch (e) {} }
   w.document.write(htmlNoScripts);
   if (wk) w.eval(wk);
+  if (ek) w.eval(ek);
   // the app's top-level bindings are lexical, so expose its store API on window
   // from within the same evaluation, then drive it through window.__store.
   w.eval(inline.join('\n') + '\n;window.__store = (typeof store !== "undefined") ? store : null;');
@@ -75,6 +80,18 @@ function snapshot(w) {
   // 5. a fresh install starts clean
   let w4 = boot();
   ok('fresh install starts at xp 0', w4.eval("window.__store.load().xp") === 0);
+
+  // 6. the export retrofit: the page hands the file to export-kit, it does not
+  //    hand-roll a Blob -> objectURL -> <a download> of its own.
+  ok('the page loads export-kit.js', /src=["']export-kit\.js["']/.test(html));
+  ok('the page no longer hand-rolls a download (no createObjectURL)', html.indexOf('createObjectURL') === -1);
+  ok('export-kit is available to the app', w.eval('typeof Export') === 'object' && w.eval('typeof Export.save') === 'function');
+  w.eval('window.__exp = []; Export.save = function (n, t, m) { window.__exp.push([n, t, m]); };');
+  const exported = w.eval('window.__exportAll && window.__exportAll()');
+  ok('__exportAll hands the file to export-kit', w.eval('window.__exp.length') === 1,
+    'Export.save was called ' + w.eval('window.__exp.length') + ' time(s)');
+  ok('...with the app/json type export-kit expects', w.eval('window.__exp[0] && window.__exp[0][2]') === 'application/json');
+  ok('...and a dated .json name', /\.json$/.test(String(exported)));
 
   let pass = 0, fail = 0;
   for (const r of results) {
