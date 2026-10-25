@@ -8,7 +8,7 @@
  * 'rlt-b32da261' by hand and served the app CACHE-FIRST, which meant a shipped
  * fix could never reach a browser that had already visited once.
  */
-const CACHE = 'rlt-cd29762e';
+const CACHE = 'rlt-48833fd3';
 const ASSETS = ['./', './index.html', './manifest.webmanifest', './icon-192.png', './icon-512.png'];
 
 self.addEventListener('install', e => {
