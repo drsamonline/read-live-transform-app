@@ -4,7 +4,7 @@
   "private": true,
   "description": "Read. Live. Transform. - offline reading companion.",
   "scripts": {
-    "test": "node tests/webkit-smoke.test.js"
+    "test": "node tests/webkit-smoke.test.js && node tests/sw.test.js"
   },
   "devDependencies": {
     "happy-dom": "^15.11.7"
