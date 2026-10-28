@@ -18,10 +18,6 @@ const file = process.argv[2] || path.join(root, 'index.html');
 const html = fs.readFileSync(file, 'utf8');
 const wkPath = path.join(path.dirname(file), 'web-kit.js');
 const wk = fs.existsSync(wkPath) ? fs.readFileSync(wkPath, 'utf8') : '';
-// export-kit is the second kit the page loads (the export retrofit): load it the
-// same way, so the suite sees the same globals the browser does.
-const ekPath = path.join(path.dirname(file), 'export-kit.js');
-const ek = fs.existsSync(ekPath) ? fs.readFileSync(ekPath, 'utf8') : '';
 
 // inline <script> blocks (the app), and the page with executable scripts stripped.
 // The app's data lives in <script id="bookdata" type="application/json"> - keep it.
@@ -38,7 +34,6 @@ function boot(seed) {
   for (const [k, v] of Object.entries(seed || {})) { try { w.localStorage.setItem(k, v); } catch (e) {} }
   w.document.write(htmlNoScripts);
   if (wk) w.eval(wk);
-  if (ek) w.eval(ek);
   // the app's top-level bindings are lexical, so expose its store API on window
   // from within the same evaluation, then drive it through window.__store.
   w.eval(inline.join('\n') + '\n;window.__store = (typeof store !== "undefined") ? store : null;');
@@ -81,22 +76,20 @@ function snapshot(w) {
   let w4 = boot();
   ok('fresh install starts at xp 0', w4.eval("window.__store.load().xp") === 0);
 
-  // 6. the export retrofit: the page hands the file to export-kit. It also keeps
-  //    its own Blob -> objectURL -> <a download> path as the FLOOR, because this
-  //    app is handed to readers as a file and export-kit.js is not always beside
-  //    it. Asserting the fallback was GONE (as this suite did until now) locked a
-  //    capability loss in as a requirement - the app exported with no kit at all
-  //    before the retrofit, and must still.
-  ok('export-kit ships INSIDE the page (no sibling file needed)', html.indexOf('export-kit: cannot convert') !== -1);
-  ok('export prefers the kit AND keeps a local fallback',
-     /window\.Export\s*&&\s*typeof\s+Export\.save/.test(html) && html.indexOf('createObjectURL') !== -1);
-  ok('export-kit is available to the app', w.eval('typeof Export') === 'object' && w.eval('typeof Export.save') === 'function');
-  w.eval('window.__exp = []; Export.save = function (n, t, m) { window.__exp.push([n, t, m]); };');
-  const exported = w.eval('window.__exportAll && window.__exportAll()');
-  ok('__exportAll hands the file to export-kit', w.eval('window.__exp.length') === 1,
-    'Export.save was called ' + w.eval('window.__exp.length') + ' time(s)');
-  ok('...with the app/json type export-kit expects', w.eval('window.__exp[0] && window.__exp[0][2]') === 'application/json');
-  ok('...and a dated .json name', /\.json$/.test(String(exported)));
+  // 6. the export path, with NO kit.
+  //
+  //    This app was built without one, and its export has never been a file: the
+  //    "Copy my practice" action builds a text summary and puts it on the
+  //    clipboard. An export retrofit was later inlined here - which the estate's
+  //    kit rule forbids, kits being one-way - and it brought with it a
+  //    window.__exportAll hook that this suite then asserted against. Removing the
+  //    retrofit removed the hook, so these assertions now check what the app
+  //    actually does, and check that the kit has not crept back in.
+  ok('export is the clipboard summary, not a file',
+     /act==='export'/.test(html) && /navigator\.clipboard/.test(html));
+  ok('...and the summary carries the practice, not just a name',
+     html.indexOf('MY MOVES') !== -1 && /Rank \$\{/.test(html.replace(/\\/g, '')));
+  ok('no export-kit is shipped in the page', html.indexOf('export-kit') === -1);
 
   let pass = 0, fail = 0;
   for (const r of results) {
