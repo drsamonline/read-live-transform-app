@@ -609,5 +609,21 @@ window.__smokeTest = function () {
 };
 window.addEventListener("error", function () { window.__bootError = true; });
 </script>
+<style id="app-theme">
+  /* read-live-transform-app - its own palette, type and shape.
+     Keyed on data-theme so the in-app theme toggle still works; !important is
+     required because web-kit sets these as inline styles on <html>. */
+  html[data-theme="dark"]{--bg:#060e11 !important;--card:#061618 !important;--ink:#eef5f5 !important;--mut:#53868c !important;--line:#072122 !important;--acc:#529c97 !important;}
+  html[data-theme="light"]{--bg:#f4f9f8 !important;--card:#ffffff !important;--ink:#0b1b21 !important;--mut:#2a706f !important;--line:#ddeceb !important;--acc:#0c615a !important;}
+  html,body{font-family:ui-serif, Georgia, "Iowan Old Style", "Times New Roman", serif !important;letter-spacing:0 !important;
+    background-image:radial-gradient(820px 360px at 50% -170px,
+      color-mix(in srgb, var(--acc) 16%, transparent), transparent 72%) !important;
+    background-repeat:no-repeat !important;background-attachment:fixed !important}
+  button,input,textarea,select{font-family:ui-serif, Georgia, "Iowan Old Style", "Times New Roman", serif !important}
+  button,.btn{border-radius:12px !important}
+  input,textarea,select{border-radius:10px !important}
+  .card,[class*="card"]{border-radius:14px !important}
+  button:not(.ghost):not(.tab){background:var(--acc) !important}
+</style>
 </body>
 </html>
