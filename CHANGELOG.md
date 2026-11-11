@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.1.0
+
+- Release cut so the tag describes the code it ships: this is the first release since 1.0.0.
+
 ## 1.0.0
 
 - First published version of the **Read. Live. Transform.** app.
